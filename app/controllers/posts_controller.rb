@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def update
     @post.update(post_params)
     if @post.invalid?
-      render :edit 
+      render :edit
     else
       @post.save
       redirect_to post_path(@post)
